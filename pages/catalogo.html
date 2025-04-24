@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITIO WEB URQUIA</title>
+    <!-- Estilos en CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- cdn  Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/loguito.gif" alt="Logo" width="35" height="35"
+                        class="d-inline-block align-text-medium">
+                    URQUIA CONSULTORÍA
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="empleo.html">Empleo</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="registrate.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                                <a class="dropdown-item" href=#redes>Redes</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href=#tel>Telefonía</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href=#seg>Seguridad</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contacto
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li>
+                            <a class="dropdown-item" href="pages/bolsa_empleo.html">Empleos</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="hero-image-container">
+                <img src="../assets/img/catalogo/catálogo.inicio.png" alt="*"
+                    class="hero-image">
+            </div>
+        </section>
+
+        <!-- Menú lateral fijo -->
+        <nav id="navbar-catalogo" class="fixed-menu">
+            <!-- ... (mantener igual tu menú actual) ... -->
+        </nav>
+
+        <!-- Contenido del catálogo -->
+        <div class="catalogo-content">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-catalogo" data-bs-smooth-scroll="true"
+                class="scrollspy-example-2" tabindex="0">
+
+                <!-- SECCIÓN 1: redes -->
+                <div id="item-1">
+                    <h2 id="redes" class="texto-ultra-destacado">1. Redes</h2>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Producto 1.1 -->
+                    <div id="item-1-1" class="product-card">
+                        <div class="product-image-container">
+                            <img src="../assets/img/catalogo/Cablecat6.png" alt="cables utp">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="texto-destacado">1.1 - Cables cat6</h3>
+                            <h4 class="letra-moderna">Cables UTP</h4>
+                            <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                        </div>
+                    </div>
+
+                    <!-- Producto 1.2 -->
+                    <div id="item-1-2" class="product-card">
+                        <div class="product-image-container">
+                            <img src="../assets/img/catalogo/Crimpeadora.png" alt="pinza gadnic">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="texto-destacado">1.2 - Crimpeadoras</h3>
+                            <h4 class="letra-moderna">Pinza Garnic</h4>
+                            <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                        </div>
+                    </div>
+
+                    <!-- Producto 1.3 -->
+                    <div id="item-1-3" class="product-card">
+                        <div class="product-image-container">
+                            <img src="../assets/img/catalogo/Switch.png" alt="tp-link">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="texto-destacado">1.3 - Switch</h3>
+                            <h4 class="letra-moderna">TP-link</h4>
+                            <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SECCIÓN 2: telefonía -->
+                <div id="item-2">
+                    
+                    <h2 id="tel" class="texto-ultra-destacado">2. Telefonía</h2>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Producto 2.1 -->
+                    <div id="item-2-1" class="product-card">
+                        <div class="product-image-container">
+                            <img src="../assets/img/catalogo/Telefono ip grandstream.png" alt="cables utp">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="texto-destacado">2.1 - Teléfono ip Grandstream</h3>
+                            <h4 class="letra-moderna">Teléfono ip</h4>
+                            <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2.2 -->
+                    <div id="item-2-2" class="product-card">
+                        <div class="product-image-container">
+                            <img src="../assets/img/catalogo/Teledofono ip inalámbrico grandstream.png"
+                                alt="cables utp">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="texto-destacado">2.2 - Teléfono inalámbrico ip Grandstream</h3>
+                            <h4 class="letra-moderna">Teléfono ip inalámbrico</h4>
+                            <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2.3 -->
+                    <div id="item-2-3" class="product-card">
+                        <div class="product-image-container">
+                            <img src="../assets/img/catalogo/Handy Adicional Yealink w52h.png" alt="cables utp">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="texto-destacado">2.3 - Handy Adicional Yealink w52h</h3>
+                            <h4 class="letra-moderna">Yealink w52h</h4>
+                            <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <!-- SECCIÓN 3: seguridad -->
+                    <div id="item-3">
+                        <h2 id="seg" class="texto-ultra-destacado">3. Seguridad</h2>
+                    </div>
+
+                    <div class="product-grid">
+                        <!-- Producto 3.1 -->
+                        <div id="item-3-1" class="product-card">
+                            <div class="product-image-container">
+                                <img src="../assets/img/catalogo/camara ip dahua.png" alt="cables utp">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="texto-destacado">3.1 - Cámara</h3>
+                                <h4 class="letra-moderna">Dahua ip</h4>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3.2 -->
+                        <div id="item-3-2" class="product-card">
+                            <div class="product-image-container">
+                                <img src="../assets/img/catalogo/dvr dahua.jpeg" alt="cables utp">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="texto-destacado">3.2 - Dvr Dahua</h3>
+                                <h4 class="letra-moderna">Dahua</h4>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3.3 -->
+                        <div id="item-3-3" class="product-card">
+                            <div class="product-image-container">
+                                <img src="../assets/img/catalogo/Disco rígido purple.png" alt="cables utp">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="texto-destacado">3.3 - Discos rígidos</h3>
+                                <h4 class="letra-moderna">Western Digital</h4>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Más información...</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="footer-title">URQUIA Consultoría</h5>
+              <p class="footer-text">Conectando talento con oportunidades desde 2025.</p>
+              <div class="social-icons">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="footer-title">Enlaces rápidos</h5>
+              <ul class="footer-links">
+                <li><a href="../index.html" class="text-white">Home</a></li>
+                <li><a href="servicios.html" class="text-white">Servicios</a></li>
+                <li><a href="empleo.html" class="text-white">Empleo</a></li>
+                <li><a href="registrate.html" class="text-white">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="footer-title">Contacto</h5>
+              <ul class="footer-contact">
+                <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+                <li><i class="fas fa-phone me-2"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope me-2"></i> info@urquiaconsultoria.com</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="my-4">
+          <div class="text-center">
+            <p class="mb-0">© 2025 URQUIA Consultoría. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var scrollSpy = new bootstrap.ScrollSpy(document.querySelector('[data-bs-spy="scroll"]'), {
+                target: '#navbar-catalogo',
+                offset: 70 // Ajuste de espacio para que el menú quede visible
+            });
+        });
+    </script>
+</body>
+
+</html>

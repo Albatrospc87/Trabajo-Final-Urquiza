@@ -1,0 +1,407 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$transition-time: 0.4s;
+$easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// Variables para el hero (tamaño más compacto)
+$hero-height: 40vh;  // Reducido de 50vh a 40vh
+$hero-max-height: 400px; // Reducido de 500px
+$hero-min-height: 250px; // Reducido de 350px
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform $transition-time $easing, box-shadow $transition-time $easing;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Animaciones personalizadas
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+// Estilos generales
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 56px; // Para el navbar fijo
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+// Hero Section Profesional
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem; // Menor margen inferior
+  
+  .hero-image-container {
+    position: relative;
+    height: $hero-height;
+    max-height: $hero-max-height;
+    min-height: $hero-min-height;
+    width: 100%;
+    
+    .hero-image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%; // Ajuste del enfoque de la imagen
+        animation: subtleZoom 25s infinite alternate ease-in-out;
+      }
+      
+      .image-overlay {
+        background: linear-gradient(135deg, rgba($primary-color, 0.8) 0%, rgba($secondary-color, 0.2) 100%);
+      }
+    }
+  }
+}
+// Animación más sutil
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03); // Reducido el zoom máximo de 1.05 a 1.03
+  }
+}
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 1200px;
+      text-align: center;
+      color: white;
+      z-index: 2;
+      
+      .hero-title {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        animation: fadeInScale 1s ease-out both;
+      }
+      
+      .hero-subtitle {
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        font-weight: 300;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        animation: fadeInScale 1s ease-out 0.3s both;
+      }
+      
+      .btn-cta {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        animation: fadeInScale 1s ease-out 0.6s both;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+          background-color: lighten($secondary-color, 10%);
+        }
+      }
+    }
+// Acordeón mejorado
+.custom-accordion {
+  .accordion-item {
+    border: none;
+    border-radius: 8px !important;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    @include card-shadow;
+    background-color: white;
+    
+    &:hover {
+      .service-header {
+        background-color: lighten($primary-color, 5%);
+      }
+    }
+  }
+  
+  .service-header {
+    background-color: $primary-color;
+    color: white;
+    padding: 1.5rem;
+    border: none;
+    font-weight: 600;
+    
+    &:not(.collapsed) {
+      background-color: darken($primary-color, 5%);
+      box-shadow: none;
+    }
+    
+    &:focus {
+      box-shadow: none;
+      border-color: transparent;
+    }
+    
+    h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+  
+  .service-icon {
+    font-size: 1.5rem;
+    color: $light-color;
+  }
+  
+  .accordion-body {
+    padding: 0;
+  }
+  
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+  
+  .service-text {
+    padding: 2rem;
+    flex: 1;
+    
+    .service-subtitle {
+      color: $primary-color;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .service-description {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  .service-features {
+    margin-top: 1.5rem;
+    
+    .feature-title {
+      font-size: 1.1rem;
+      color: $secondary-color;
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+      
+      li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.75rem;
+        
+        i {
+          position: absolute;
+          left: 0;
+          top: 0.25rem;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  
+  .service-image {
+    flex: 1;
+    padding: 1rem;
+    @include flex-center;
+    animation: fadeInScale 0.8s $easing 0.3s both;
+    
+    img {
+      @include responsive-image;
+      border-radius: 8px;
+      max-height: 300px;
+      object-fit: cover;
+      animation: float 4s ease-in-out infinite;
+    }
+  }
+}
+
+// Sección de contacto
+.contact-section {
+  padding: 5rem 0;
+  background-color: $light-color;
+  
+  .section-title {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+  }
+}
+
+// Footer mejorado
+footer {
+  .bg-dark {
+    padding: 2rem 0;
+    background-color: $dark-color !important;
+    
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      
+      img {
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover img {
+        transform: rotate(10deg);
+      }
+    }
+    
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+// Efectos hover para imágenes
+.img-hover-effect {
+  transition: transform $transition-time $easing, filter $transition-time $easing;
+  filter: brightness(0.95);
+  
+  &:hover {
+    transform: scale(1.03);
+    filter: brightness(1);
+  }
+}
+
+// Media queries para responsividad
+@media (max-width: 991.98px) {
+  .service-content {
+    flex-direction: column !important;
+  }
+  
+  .service-image {
+    order: -1;
+    padding-bottom: 0 !important;
+    
+    img {
+      max-height: 250px !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    .hero-image-container {
+      height: 60vh;
+      min-height: 300px;
+    }
+    
+    .hero-content {
+      .hero-title {
+        margin-bottom: 1rem;
+      }
+      
+      .hero-subtitle {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+      
+      .btn-cta {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .service-text, .service-image {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    .hero-image-container {
+      height: 70vh;
+      min-height: 250px;
+    }
+    
+    .hero-content {
+      width: 95%;
+      
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .feature-list {
+    margin-bottom: 1rem;
+  }
+}

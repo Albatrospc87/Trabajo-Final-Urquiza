@@ -1,0 +1,20 @@
+/* Asegurar que el navbar no cubra contenido al hacer scroll */
+.body {
+    padding-top: 56px; /* Ajusta según la altura de tu navbar */
+}
+
+/* Mejorar visualización del dropdown en móviles */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        background-color: transparent;
+        border: none;
+    }
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        color: rgba(255,255,255,.55);
+    }
+    .dropdown-item:hover {
+        color: rgba(255,255,255,.75);
+        background-color: transparent;
+    }
+}

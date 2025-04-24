@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Urquia Consultoría</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css para animaciones básicas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/loguito.gif" alt="Logo Urquia Consultoría" width="35" height="35" 
+                         class="d-inline-block align-text-top me-2">
+                    URQUIA CONSULTORÍA
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- Menú principal -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+                        <li class="nav-item"><a class="nav-link" href="empleo.html">Empleo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registrate.html">Contacto</a></li>
+                    </ul>
+    
+                    <!-- Menú desplegable -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#soporte">Soporte IA</a></li>
+                                <li><a class="dropdown-item" href="#rv">Realidad Virtual</a></li>
+                                <li><a class="dropdown-item" href="#desarrollo">Desarrollo web</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#contacto">Contacto Rápido</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="services-container">
+<!-- Hero Section Profesional -->
+<section class="hero-section">
+    <div class="hero-image-container">
+        <div class="hero-image-wrapper">
+            <img src="../assets/img/servicios/IA.servicios1.png" 
+                 class="hero-image" 
+                 alt="Servicios profesionales de consultoría tecnológica"
+                 loading="eager"> <!-- Precarga la imagen -->
+            <div class="image-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Soluciones Tecnológicas Integrales</h1>
+            <p class="hero-subtitle">Innovación y eficiencia para tu negocio</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Accordion Mejorado -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="accordion custom-accordion" id="servicesAccordion">
+                        <!-- Item 1 - Soporte IA -->
+                        <div class="accordion-item service-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed service-header" type="button" 
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" 
+                                        aria-expanded="false" aria-controls="collapseOne">
+                                    <i class="fas fa-robot service-icon me-3"></i>
+                                    <h3 id="soporte">Soporte técnico en IA</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" 
+                                 data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <div class="service-content">
+                                        <div class="service-text">
+                                            <h3 class="service-subtitle">Asistencia especializada en Inteligencia Artificial</h3>
+                                            <div class="service-description">
+                                                <p>Ofrecemos soporte técnico integral para sistemas de Inteligencia Artificial, desde la implementación inicial hasta el mantenimiento continuo y la optimización de rendimiento.</p>
+                                                
+                                                <div class="service-features">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h4 class="feature-title">Áreas Clave:</h4>
+                                                            <ul class="feature-list">
+                                                                <li><i class="fas fa-check-circle"></i> Configuración e Implementación</li>
+                                                                <li><i class="fas fa-check-circle"></i> Entrenamiento de Modelos</li>
+                                                                <li><i class="fas fa-check-circle"></i> Optimización de Rendimiento</li>
+                                                                <li><i class="fas fa-check-circle"></i> Integración con sistemas existentes</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h4 class="feature-title">Beneficios:</h4>
+                                                            <ul class="feature-list">
+                                                                <li><i class="fas fa-star"></i> Soluciones personalizadas</li>
+                                                                <li><i class="fas fa-star"></i> Soporte 24/7</li>
+                                                                <li><i class="fas fa-star"></i> Actualizaciones constantes</li>
+                                                                <li><i class="fas fa-star"></i> Documentación completa</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-image">
+                                            <img src="../assets/img/servicios/IA.servicios2.png" 
+                                                 alt="Soporte en Inteligencia Artificial" 
+                                                 class="img-fluid rounded img-hover-effect">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Item 2 - Realidad Virtual -->
+                        <div class="accordion-item service-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed service-header" type="button" 
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" 
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fas fa-vr-cardboard service-icon me-3"></i>
+                                    <h3 id="rv">Realidad Virtual</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" 
+                                 data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <div class="service-content">
+                                        <div class="service-text">
+                                            <h3 class="service-subtitle">Experiencias Inmersivas con VR</h3>
+                                            <div class="service-description">
+                                                <p>Desarrollamos soluciones de Realidad Virtual que transforman la manera en que interactúas con tu contenido, ya sea para entrenamiento, educación o entretenimiento.</p>
+                                                
+                                                <div class="service-features">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h4 class="feature-title">Áreas Clave:</h4>
+                                                            <ul class="feature-list">
+                                                                <li><i class="fas fa-check-circle"></i> Configuración de Hardware</li>
+                                                                <li><i class="fas fa-check-circle"></i> Desarrollo de Software</li>
+                                                                <li><i class="fas fa-check-circle"></i> Optimización de Rendimiento</li>
+                                                                <li><i class="fas fa-check-circle"></i> Creación de contenidos 3D</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h4 class="feature-title">Beneficios:</h4>
+                                                            <ul class="feature-list">
+                                                                <li><i class="fas fa-star"></i> Experiencias inmersivas</li>
+                                                                <li><i class="fas fa-star"></i> Soluciones a medida</li>
+                                                                <li><i class="fas fa-star"></i> Soporte técnico especializado</li>
+                                                                <li><i class="fas fa-star"></i> Entrenamiento para tu equipo</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-image">
+                                            <img src="../assets/img/servicios/IA.servicios3.png" 
+                                                 alt="Realidad Virtual" 
+                                                 class="img-fluid rounded img-hover-effect">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 - Desarrollo Web -->
+                        <div class="accordion-item service-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed service-header" type="button" 
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" 
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fas fa-code service-icon me-3"></i>
+                                    <h3 id="desarrollo">Desarrollo Web Avanzado</h3>                           
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" 
+                                 data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <div class="service-content">
+                                        <div class="service-text">
+                                            <h3 class="service-subtitle">Soluciones Web a Medida</h3>
+                                            <div class="service-description">
+                                                <p>Creación de aplicaciones web modernas, escalables y seguras, utilizando las últimas tecnologías del mercado.</p>
+                                                
+                                                <div class="service-features">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h4 class="feature-title">Tecnologías:</h4>
+                                                            <ul class="feature-list">
+                                                                <li><i class="fas fa-check-circle"></i> React.js / Angular / Vue.js</li>
+                                                                <li><i class="fas fa-check-circle"></i> Node.js / Python / PHP</li>
+                                                                <li><i class="fas fa-check-circle"></i> Bases de datos SQL y NoSQL</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h4 class="feature-title">Ventajas:</h4>
+                                                            <ul class="feature-list">
+                                                                <li><i class="fas fa-star"></i> Diseño responsive</li>
+                                                                <li><i class="fas fa-star"></i> Optimización SEO</li>
+                                                                <li><i class="fas fa-star"></i> Alto rendimiento</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-image">
+                                            <img src="../assets/img/servicios/desarrolloweb.png" 
+                                                 alt="Desarrollo Web" 
+                                                 class="img-fluid rounded img-hover-effect">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de contacto -->
+        <section id="contacto" class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mb-4">¿Listo para transformar tu negocio?</h2>
+                        <p class="lead mb-5">Contáctanos hoy mismo y descubre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
+                        <a href="registrate.html" class="btn btn-primary btn-lg px-4 py-2">
+                            <i class="fas fa-paper-plane me-2"></i> Solicitar Información
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Mejorado -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="footer-title">URQUIA Consultoría</h5>
+              <p class="footer-text">Conectando talento con oportunidades desde 2025.</p>
+              <div class="social-icons">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="footer-title">Enlaces rápidos</h5>
+              <ul class="footer-links">
+                <li><a href="../index.html" class="text-white">Home</a></li>
+                <li><a href="servicios.html" class="text-white">Servicios</a></li>
+                <li><a href="empleo.html" class="text-white">Empleo</a></li>
+                <li><a href="registrate.html" class="text-white">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="footer-title">Contacto</h5>
+              <ul class="footer-contact">
+                <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+                <li><i class="fas fa-phone me-2"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope me-2"></i> info@urquiaconsultoria.com</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="my-4">
+          <div class="text-center">
+            <p class="mb-0">© 2025 URQUIA Consultoría. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script>
+        // Activar tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Smooth scroll para anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

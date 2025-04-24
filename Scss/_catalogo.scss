@@ -1,0 +1,256 @@
+// Variables
+$product-card-width: 280px;
+$product-card-height: 350px;
+$image-height: 180px;
+$transition-time: 0.3s;
+
+// Estilos generales
+.catalogo-content {
+    margin-left: 250px; // Ajustar según ancho del menú
+    padding: 20px;
+    
+    @media (max-width: 992px) {
+        margin-left: 0;
+        padding-top: 70px; // Espacio para el menú en móvil
+    }
+}
+
+// Grid de productos
+.product-grid {
+    margin: 2rem 0; // Espacio arriba y abajo
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 20px auto; // Centrado horizontal
+    max-width: 1200px; // Ancho máximo para evitar que se expanda demasiado
+    width: 100%;
+    padding: 0 20px; // Padding lateral para móviles
+}
+@media (max-width: 1024px) {
+    .product-grid {  
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* ← Propiedad correcta */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr)); // 2 columnas en tablet
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr; // 1 columna en móvil
+    }
+}
+
+/* Tarjeta de producto */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform $transition-time ease, box-shadow $transition-time ease;
+    height: $product-card-height;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        
+        .product-image-container img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+// Contenedor de imagen
+.product-image-container {
+    height: $image-height;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    
+    img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        transition: transform $transition-time ease;
+    }
+}
+
+// Información del producto
+.product-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    h4, p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+}
+
+// Efectos de aparición para scroll
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-delay: $i * 0.1s;
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .product-card {
+        height: auto;
+    }
+    
+    .product-image-container {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+//imagen principal//
+// Variables para el hero banner
+$hero-height: 60vh; // Altura ajustable (viewport height)
+$hero-min-height: 300px;
+$hero-max-height: 500px;
+
+// Estilos para el hero banner
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    
+    .hero-image-container {
+        height: $hero-height;
+        min-height: $hero-min-height;
+        max-height: $hero-max-height;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+    }
+    
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.05);
+        transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        
+        // Efecto de zoom sutil al cargar
+        animation: subtleZoom 15s infinite alternate;
+    }
+    
+    // por si añado un título
+    .hero-text {
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+        color: white;
+        z-index: 2;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: fadeInUp 1.5s ease-out 0.5s forwards;
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+    }
+}
+
+// Animación de zoom sutil
+@keyframes subtleZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+
+    }
+
+
+// Responsive
+@media (max-width: 768px) {
+    .hero-banner {
+        .hero-image-container {
+            height: 40vh;
+            min-height: 250px;
+        }
+        
+        .hero-text {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}

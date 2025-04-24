@@ -1,0 +1,184 @@
+// Variables para animaciones
+$transition-time: 0.3s;
+$easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// Animaciones personalizadas
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Estilos para las tarjetas
+.grid-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 80px; // Para el navbar fijo
+
+  .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all $transition-time $easing;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    
+    &:hover {
+      animation: pulse 1.5s infinite;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      
+      .card-hover-effect {
+        opacity: 1;
+      }
+      
+      .btn-hover-effect {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    .card-image-container {
+      position: relative;
+      overflow: hidden;
+      
+      img {
+        transition: transform $transition-time $easing;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .card-hover-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        opacity: 0;
+        transition: opacity $transition-time $easing;
+      }
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+      
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #343a40;
+        position: relative;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 50px;
+          height: 3px;
+          background: linear-gradient(to right, #007bff, #00b4ff);
+          transition: width $transition-time $easing;
+        }
+      }
+      
+      .card-text {
+        color: #6c757d;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    &:hover .card-title::after {
+      width: 100px;
+    }
+  }
+}
+
+// Efecto para botones
+.btn-hover-effect {
+  transition: all $transition-time $easing;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: linear-gradient(to right, #007bff, #00b4ff);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.7s $easing;
+  }
+  
+  &:hover::after {
+    left: 100%;
+  }
+}
+
+// Animaciones para elementos específicos
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideInFromBottom 0.8s $easing forwards;
+}
+
+// Efecto de carga progresiva para las tarjetas
+@for $i from 1 through 4 {
+  .card:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.2s};
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .grid-tarjetas {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    
+    .card {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

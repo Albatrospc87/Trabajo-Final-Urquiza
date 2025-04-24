@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolsa de Empleo | URQUIA Consultoría</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css para animaciones básicas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/loguito.gif" alt="Logo URQUIA" width="35" height="35"
+            class="d-inline-block align-text-medium logo-brand">
+            URQUIA CONSULTORÍA 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto">  <!-- Añadido me-auto aquí -->
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+            <li class="nav-item"><a class="nav-link active" href="empleo.html">Empleo</a></li>
+            <li class="nav-item"><a class="nav-link" href="registrate.html">Contacto</a></li>
+          </ul>
+          <!-- Menú desplegable - ahora estará a la derecha -->
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" 
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Secciones
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">                     
+                <li><a class="dropdown-item" href="#tecnologia">Tecnología</a></li>
+                <li><a class="dropdown-item" href="#arte">Arte</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section con imagen más pequeña y animada -->
+    <section class="hero-section">
+      <div class="hero-image-container">
+        <img src="../assets/img/bolsa/Empleo.jpeg" class="hero-image img-fluid"
+            alt="Oportunidades de empleo en URQUIA Consultoría">
+        <div class="hero-overlay">
+          <h1 class="hero-title animate__animated animate__fadeInDown">Encuentra tu trabajo ideal</h1>
+          <p class="hero-subtitle animate__animated animate__fadeInUp">Las mejores oportunidades laborales en tecnología y arte</p>
+        </div>
+      </div>
+    </section> 
+
+    <section class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="section-title">Oportunidades de Empleo</h1>
+        <p class="section-subtitle">Explora nuestras ofertas laborales actuales</p>
+      </div>
+      
+      <!-- Sección Tecnología -->
+      <h2 id="tecnologia" class="section-heading">
+        <i class="fas fa-laptop-code me-2"></i>Tecnología
+      </h2>
+      <div class="row g-4">
+        <!-- Oferta 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 job-card">
+            <div class="card-img-container">
+              <img src="../assets/img/bolsa/emp1.jpg" class="card-img-top" alt="Desarrollador Frontend">
+            </div>
+            <div class="card-body">
+              <div class="job-badge">Remoto</div>
+              <h5 class="card-title">Desarrollador Frontend</h5>
+              <p class="card-text company">Tech Solutions</p>
+              <p class="card-text description">Buscamos desarrollador con experiencia en React y TypeScript para unirse a nuestro equipo remoto.</p>
+              <div class="job-details">
+                <span><i class="fas fa-money-bill-wave me-1"></i> $80,000 - $100,000</span>
+                <span><i class="fas fa-clock me-1 ms-3"></i> Tiempo completo</span>
+              </div>
+              <a href="../pages/construccion.html" class="btn btn-primary mt-3 apply-btn">Postularme</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Oferta 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 job-card">
+            <div class="card-img-container">
+              <img src="../assets/img/bolsa/emp2.jpg" class="card-img-top" alt="Ingeniero de Software">
+            </div>
+            <div class="card-body">
+              <div class="job-badge">Presencial</div>
+              <h5 class="card-title">Ingeniero de Software</h5>
+              <p class="card-text company">Code Masters</p>
+              <p class="card-text description">Únete a nuestro equipo para desarrollar soluciones innovadoras en un ambiente colaborativo.</p>
+              <div class="job-details">
+                <span><i class="fas fa-money-bill-wave me-1"></i> $90,000 - $120,000</span>
+                <span><i class="fas fa-clock me-1 ms-3"></i> Tiempo completo</span>
+              </div>
+              <a href="../pages/construccion.html" class="btn btn-primary mt-3 apply-btn">Postularme</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Oferta 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 job-card">
+            <div class="card-img-container">
+              <img src="../assets/img/bolsa/emp3.jpg" class="card-img-top" alt="Analista de Datos">
+            </div>
+            <div class="card-body">
+              <div class="job-badge">Híbrido</div>
+              <h5 class="card-title">Analista de Datos</h5>
+              <p class="card-text company">Data Insights</p>
+              <p class="card-text description">Analiza grandes conjuntos de datos para extraer información valiosa para nuestros clientes.</p>
+              <div class="job-details">
+                <span><i class="fas fa-money-bill-wave me-1"></i> $75,000 - $95,000</span>
+                <span><i class="fas fa-clock me-1 ms-3"></i> Tiempo completo</span>
+              </div>
+              <a href="../pages/construccion.html" class="btn btn-primary mt-3 apply-btn">Postularme</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Ofertas adicionales de tecnología... -->
+      </div>
+      
+      <!-- Sección Arte -->
+      <h2 id="arte" class="section-heading mt-5">
+        <i class="fas fa-palette me-2"></i>Arte
+      </h2>
+      <div class="row g-4">
+        <!-- Oferta 6 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 job-card">
+            <div class="card-img-container">
+              <img src="../assets/img/bolsa/Emp6.jpg" class="card-img-top" alt="Diseñador Gráfico">
+            </div>
+            <div class="card-body">
+              <div class="job-badge">Remoto</div>
+              <h5 class="card-title">Diseñador Gráfico</h5>
+              <p class="card-text company">Creative Studio</p>
+              <p class="card-text description">Crea diseños impactantes para marcas reconocidas desde la comodidad de tu hogar.</p>
+              <div class="job-details">
+                <span><i class="fas fa-money-bill-wave me-1"></i> $60,000 - $80,000</span>
+                <span><i class="fas fa-clock me-1 ms-3"></i> Tiempo completo</span>
+              </div>
+              <a href="../pages/construccion.html" class="btn btn-primary mt-3 apply-btn">Postularme</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Ofertas adicionales de arte... -->
+      </div>
+    </section>
+    
+    <!-- Sección de Newsletter -->
+    <section class="newsletter-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h3 class="newsletter-title">¿Quieres recibir las últimas ofertas?</h3>
+            <p class="newsletter-text">Suscríbete a nuestro boletín y recibe las nuevas oportunidades directamente en tu correo.</p>
+            <form class="newsletter-form">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                <button class="btn btn-primary" type="submit">Suscribirme</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="footer-title">URQUIA Consultoría</h5>
+          <p class="footer-text">Conectando talento con oportunidades desde 2025.</p>
+          <div class="social-icons">
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="footer-title">Enlaces rápidos</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="text-white">Home</a></li>
+            <li><a href="servicios.html" class="text-white">Servicios</a></li>
+            <li><a href="empleo.html" class="text-white">Empleo</a></li>
+            <li><a href="registrate.html" class="text-white">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-title">Contacto</h5>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+            <li><i class="fas fa-phone me-2"></i> +123 456 7890</li>
+            <li><i class="fas fa-envelope me-2"></i> info@urquiaconsultoria.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">© 2025 URQUIA Consultoría. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para animaciones -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+
+</html>

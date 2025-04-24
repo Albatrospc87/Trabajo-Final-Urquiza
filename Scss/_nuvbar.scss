@@ -1,0 +1,16 @@
+    /* Asegura que el navbar esté por encima de todo */
+    .navbar {
+        z-index: 1030; /* Bootstrap usa 1030 por defecto para navbars fijos */
+    }
+    
+    /* Compensa el espacio del navbar fijo */
+    body {
+        padding-top: 56px; /* Altura estándar del navbar */
+    }
+    
+    /* Para dispositivos móviles donde el navbar podría ser más alto */
+    @media (max-width: 992px) {
+        body {
+            padding-top: 72px;
+        }
+    }

@@ -1,0 +1,400 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+// Mixins
+@mixin transition($property: all, $duration: 0.3s, $easing: ease-in-out) {
+  transition: $property $duration $easing;
+}
+
+@mixin box-shadow($x: 0, $y: 4px, $blur: 6px, $color: rgba(0,0,0,0.1)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Estilos generales
+body {
+  font-family: $font-secondary;
+  padding-top: 56px; // Para el navbar fijo
+  color: $dark-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: 600;
+}
+
+// Hero Section
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  
+  .hero-image-container {
+    height: 400px; // Altura reducida
+    overflow: hidden;
+    position: relative;
+    
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      @include transition(opacity, 0.5s);
+      
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .hero-subtitle {
+        font-size: 1.25rem;
+        max-width: 600px;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      }
+    }
+  }
+}
+
+// Secciones
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $primary-color;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: $secondary-color;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: lighten($dark-color, 20%);
+  margin-bottom: 2rem;
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $light-color;
+  color: $primary-color;
+  
+  i {
+    color: $secondary-color;
+  }
+}
+
+// Tarjetas de empleo
+.job-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  @include box-shadow(0, 4px, 12px);
+  @include transition();
+  
+  &:hover {
+    transform: translateY(-5px);
+    @include box-shadow(0, 8px, 20px);
+    
+    .card-img-top {
+      transform: scale(1.05);
+    }
+  }
+  
+  .card-img-container {
+    height: 180px;
+    overflow: hidden;
+    
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include transition(transform, 0.5s);
+    }
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    
+    .job-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: $secondary-color;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $primary-color;
+    }
+    
+    .company {
+      font-weight: 600;
+      color: $secondary-color;
+      margin-bottom: 0.75rem;
+    }
+    
+    .description {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: lighten($dark-color, 15%);
+    }
+    
+    .job-details {
+      font-size: 0.85rem;
+      color: lighten($dark-color, 20%);
+      margin-bottom: 1rem;
+      
+      i {
+        color: $secondary-color;
+      }
+    }
+    
+    .apply-btn {
+      background: $secondary-color;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      @include transition();
+      
+      &:hover {
+        background: darken($secondary-color, 10%);
+        transform: translateY(-2px);
+        @include box-shadow(0, 4px, 8px, rgba($secondary-color, 0.3));
+      }
+    }
+  }
+}
+
+// Newsletter
+.newsletter-section {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  
+  .newsletter-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    
+    .form-control {
+      height: 50px;
+      border: none;
+      border-radius: 30px 0 0 30px;
+      padding-left: 20px;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: $secondary-color;
+      }
+    }
+    
+    .btn {
+      border-radius: 0 30px 30px 0;
+      height: 50px;
+      padding: 0 25px;
+      background: $accent-color;
+      border: none;
+      font-weight: 600;
+      @include transition();
+      
+      &:hover {
+        background: darken($accent-color, 10%);
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  .footer-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(white, 0.1);
+      border-radius: 50%;
+      @include transition();
+      
+      &:hover {
+        background: $secondary-color;
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      a {
+        color: rgba(white, 0.8);
+        text-decoration: none;
+        @include transition();
+        
+        &:hover {
+          color: white;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      
+      i {
+        width: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Animaciones
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__pulse {
+  animation-name: pulse;
+}
+
+// Efecto hover para logo
+.logo-brand {
+  @include transition(transform, 0.3s);
+  
+  &:hover {
+    transform: rotate(15deg);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .hero-section {
+    .hero-image-container {
+      height: 300px;
+      
+      .hero-overlay {
+        .hero-title {
+          font-size: 2rem;
+        }
+        
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css para animaciones básicas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+   
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/loguito.gif" alt="Logo" width="35" height="35" class="d-inline-block align-text-top me-2">
+                    URQUIA CONSULTORÍA
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- Menú principal -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+                        <li class="nav-item"><a class="nav-link" href="empleo.html">Empleo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registrate.html">Contacto</a></li>
+                    </ul>
+    
+                    <!-- Menú desplegable -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#concepto">Concepto</a></li>
+                                <li><a class="dropdown-item" href="#chatbots">Chatbots</a></li>
+                                <li><a class="dropdown-item" href="#herramientas">Herramientas</a></li>
+                                <li><a class="dropdown-item" href="#consideraciones">Consideraciones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid-tarjetas">
+            <!-- Generamos 12 tarjetas -->
+            <div class="card animate__animated animate__fadeInUp">
+                <div class="card-image-container">
+                    <img src="../assets/img/Tips/Concepto-básico.jpg" class="card-img-top" alt="Imagen 1">
+                    <div class="card-hover-effect"></div>
+                </div>
+                <div class="card-body">
+                    <h5 id="concepto" class="card-title">Tip 1️⃣ 1. Conceptos Básicos de IA 📖 </h5>
+                    <p class="card-text">Definición: La IA es la simulación de procesos de inteligencia humana por parte
+                        de máquinas, especialmente sistemas informáticos.
+
+                        Tipos de IA:
+
+                        IA débil (Narrow AI): Especializada en una tarea (ej: chatbots, reconocimiento facial).
+
+                        IA fuerte (General AI): Capacidad de razonar como un humano (aún en desarrollo).
+
+                        Machine Learning (ML): Subcampo de la IA donde las máquinas aprenden de datos sin ser
+                        programadas explícitamente.</p>
+                    <a href="../pages/construccion.html" class="btn btn-primary btn-hover-effect">Más info</a>
+                </div>
+            </div>
+
+            <div class="card animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="card-image-container">
+                    <img src="../assets/img/Tips/aplicaciones.IA.jpeg" class="card-img-top" alt="Imagen 2">
+                    <div class="card-hover-effect"></div>
+                </div>
+                <div class="card-body">
+                    <h5 id="chatbots" class="card-title">Tip 2️⃣ Chatbots (como ChatGPT, Bard).
+
+                        Reconocimiento de imágenes y voz (ej: Siri, Google Lens).
+
+                        Sistemas de recomendación (Netflix, Spotify).
+
+                        Autos autónomos (Tesla, Waymo).
+
+                        Diagnóstico médico (análisis de radiografías con IA).</p>
+                        <a href="../pages/construccion.html" class="btn btn-primary btn-hover-effect">Más info</a>
+                </div>
+            </div>
+
+            <div class="card animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="card-image-container">
+                    <img src="../assets/img/Tips/Herramientas-IA.png" class="card-img-top" alt="Imagen 3">
+                    <div class="card-hover-effect"></div>
+                </div>
+                <div class="card-body">
+                    <h5 id="herramientas" class="card-title">Tip 3️⃣ Herramientas y Plataformas para Experimentar 🤝
+                    </h5>
+                    <p class="card-text">Google Colab (para programar modelos en Python gratis).
+
+                        TensorFlow / PyTorch (frameworks para Machine Learning).
+
+                        Scikit-learn (biblioteca para algoritmos clásicos de ML).
+
+                        Hugging Face (para modelos de Procesamiento de Lenguaje Natural - NLP).</p>
+                    <a href="../pages/construccion.html" class="btn btn-primary btn-hover-effect">Más info</a>
+                </div>
+            </div>
+
+            <div class="card animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="card-image-container">
+                    <img src="../assets/img/Tips/Etica-IA.png" class="card-img-top" alt="Imagen 4">
+                    <div class="card-hover-effect"></div>
+                </div>
+                <div class="card-body">
+                    <h5 id="consideraciones" class="card-title">Tip 4️⃣ Consideraciones Éticas 💰 </h5>
+                    <p class="card-text">Sesgo algorítmico: Los modelos pueden reflejar prejuicios presentes en los
+                        datos de entrenamiento.
+
+                        Privacidad: Uso responsable de datos personales.
+
+                        Impacto laboral: Cómo la IA puede reemplazar o complementar trabajos.</p>
+                    <a href="../pages/construccion.html" class="btn btn-primary btn-hover-effect">Más info</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="footer-title">URQUIA Consultoría</h5>
+              <p class="footer-text">Conectando talento con oportunidades desde 2025.</p>
+              <div class="social-icons">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="footer-title">Enlaces rápidos</h5>
+              <ul class="footer-links">
+                <li><a href="../index.html" class="text-white">Home</a></li>
+                <li><a href="servicios.html" class="text-white">Servicios</a></li>
+                <li><a href="empleo.html" class="text-white">Empleo</a></li>
+                <li><a href="registrate.html" class="text-white">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="footer-title">Contacto</h5>
+              <ul class="footer-contact">
+                <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+                <li><i class="fas fa-phone me-2"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope me-2"></i> info@urquiaconsultoria.com</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="my-4">
+          <div class="text-center">
+            <p class="mb-0">© 2025 URQUIA Consultoría. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Script para animaciones -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+      </script>
+</body>
+
+</html>
